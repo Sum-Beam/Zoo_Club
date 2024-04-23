@@ -9,11 +9,28 @@
 	<link href="https://fonts.googleapis.com/css2?family=Joti+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="functions/functions.php">
 	
 	<title>Zoo-Club</title>
 </head>
+<script src="https://kit.fontawesome.com/abe8abc48d.js" crossorigin="anonymous"></script>
 <body style="background-color: #F7FFEF;">
-	<nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: #CCEFFE;">
+	<div class="arrow-up" style="position: fixed; bottom: 20px; right: 50px; width: 50px;
+	height: 50px;
+	background: #CCEFFE;
+	text-align: center;
+	display: block;
+	line-height: 50px ;
+	border-radius: 50%;
+	transition: .5s;">
+	<style>
+		.arrow-up:hover{
+			background: #d6d8f7;
+		}
+	</style>
+		<a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+	</div>
+	<nav class="navbar fixed-top navbar-expand-xl navbar-light" style="background-color: #CCEFFE;">
 		<div class="container-fluid">
             
 			<a class="navbar-brand" href="#"><img src="img/j.png" style="width: 200px;"></a>
@@ -24,101 +41,177 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Кошки</a>
+					  <a class="nav-link" href="cats.html">Кошки</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Собаки</a>
+					  <a class="nav-link" href="#">Собаки</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Услуги</a>
+					  <a class="nav-link" href="#services-section">Услуги</a>
 					</li>
-                    <li class="nav-item">
-						<a class="nav-link" href="#">Контакты</a>
+					<li class="nav-item">
+					  <a class="nav-link" href="#services-section3">Контакты</a>
 					</li>
-                    <li class="nav-item">
-						<a class="nav-link" href="#">Местоположение</a>
+					<li class="nav-item">
+					  <a class="nav-link" href="#services-section2">Местоположение</a>
 					</li>
-				</ul>
-				
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-bs-toggle="modal" data-bs-target="#examleModal"><i class="far fa-user"></i></a>
-						<ul class="menu">
+				   </ul>
+				   
+				<div class="burger">
+					<span></span>
+					</div>
+                <div class="col-md-4">
+						<form action="">
+							<div class="input-group">
+								<input type="text" class="form-control" name="s" placeholder="Searching..." aria-label="Searching..." aria-describedby="button-addon2">
+								<button class="btn btn-outline-secondary" type="submit" id="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+							  </div>
+						</form>
+					</div>
+					<style>
+						.btn,
+						.dropdown-menu,
+						.form-control
+						{
+							border-radius: 20px;
+						}
 
-						</ul>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-cart">
-							<i class="fas fa-shopping-cart"></i>
-						</a>
-						<div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-xl">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										<table class="table">
-											<tbody>
-												<tr>
-													<td><img src="img/home.jpg" alt="" style="max-width: 250px;"></td>
-													<td><a href="#">Домик-когтеточка</a></td>
-													<td>950р.</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td><img src="img/kanat.jpg" alt="" style="max-width: 250px;"></td>
-													<td><a href="#">Канат</a></td>
-													<td>300р.</td>
-													<td>1</td>
-												</tr>
-										
-											</tbody>
-										</table>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-										<button type="button" class="btn btn-primary">Оформить заказ</button>
-									</div>
-								</div>
-							</div>
+						.form-control:focus{
+							
+							box-shadow: none;
+						}
+						.form-control::placeholder{
+							color: grey;
+						}
+						.btn-secondary{
+							background-color: #CCEFFE;
+							color: #000;
+						}
+						.btn-outline-secondary{
+							background-color: #CCEFFE;
+						}
+						.btn-outline-secondary:hover{
+							background-color: #CCEFFE;
+							color: #000;
+						}
+					</style>
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link" data-bs-toggle="modal" data-bs-target="#examleModal"><i class="fa-solid fa-user fa-2x" style="font-size: 20px;"></i></a>
+							<ul class="menu"></ul>
+						   </li>
+						   
+					<div class="col-md-4 cart-buttons" style="display: flex; align-items: center; margin-bottom: 5px;">
+						<div style="margin-right: 3px; position: relative;">
+						  <a href="#" class="btn" style="position: relative; display: inline-block;">
+							<span class="badge text-bg-info cart-badge bg-dander border-light rounded-circle" style="position: absolute; top: 0; right: 0; font-size: 10px;">3</span>
+							<i class="fa-solid fa-heart" style="font-size: 20px;"></i>
+						  </a>
 						</div>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-					</li>
-				</ul>
+						<div style="margin-left: 3px; margin-right: 3px; position: relative;">
+						  <button class="btn" type="button" style="display: inline-block;">
+							<span class="badge text-bg-info cart-badge bg-dander border-light rounded-circle" style="position: absolute; top: 0; right: 0; font-size: 10px;">5</span>
+							<i class="fa-solid fa-cart-shopping fa-2x" style="font-size: 20px;"></i>
+						  </button>
+						</div>
+					   </div>
+				 </ul> 
 			</div>
 		</div>
 	</nav>
+	
 
 	<!-- Modal -->
 	<div class="modal fade" id="examleModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-title" id="exampleModalLabel">Вход</h2>
+					<h2 class="modal-title" id="exampleModalLabel">Регистрация</h2>
+					<br>
 					<button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+					
 				</div>
 				<div class="modal-body">
 					<form action="">
-						<div class="row mb-3">
-							
-						</div>
+					<div class="row mb-3">
+								<div class="col">
+								  <label for="inputFirstName" class="form-label">Имя</label>
+								  <input type="text" class="form-control" id="inputFirstName" placeholder="Введите имя">
+								</div>
+								<div class="col">
+								  <label for="inputLastName" class="form-label">Фамилия</label>
+								  <input type="text" class="form-control" id="inputLastName" placeholder="Введите фамилию">
+								</div>
+							  </div>
+							  <div class="mb-3">
+								<label for="inputEmailAddress" class="form-label">Email адрес</label>
+								<input type="email" class="form-control" id="inputEmailAddress" placeholder="name@example.com">
+							  </div>
+							  <div class="mb-3">
+								<label for="inputPassword5" class="form-label">Пароль</label>
+								<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+								<div id="passwordHelpBlock" class="form-text">
+								<p style="color: darkgrey;">*Пароль должен состоять из 8–20 символов, содержать буквы и цифры, пробелы или специальные символы.</p>
+								</div>
+								<p style="color: darkgrey;">Если у вас уже есть аккаунт, перейдите на страницу <a href="#vxod" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: blue;">вход</a></p>
 
-					</form>
+								<button class="btn-secondary"  data-bs-dismiss="modal" style="background-color: #fecfcc; border-radius: 20px;">Закрыть</button>
+								
+								<button class="btn-secondary" style="background-color: #CCEFFE; border-radius: 20px;" type="submit">Сохранить</button>
+
+							</div>		
+					</form>		
+				 </div>			 		
+			</div>	
+						  
+		</div>				
+	</div>			
+	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="loginModalLabel">Вход</h2>
+					<button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
 				</div>
-				<div class="modal-footer">
-					<button class="btn-secondary"  data-bs-dismiss="modal" style="background-color: #CCEFFE;">Закрыть</button>
-					<button class="btn-secondary" style="background-color: aquamarine;">Сохранить</button>
+				<div class="modal-body" id="vxod">
+					<form action="">
+						<div class="row mb-3">
+							<div class="mb-3">
+								<label for="inputEmailAddress" class="form-label">Email адрес</label>
+								<input type="email" class="form-control" id="inputEmailAddress" placeholder="name@example.com">
+							</div>
+							<div class="mb-3">
+								<label for="inputPassword5" class="form-label">Пароль</label>
+								<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+								<div id="passwordHelpBlock" class="form-text">
+									<p style="color: darkgrey;">*Пароль должен состоять из 8–20 символов, содержать буквы и цифры, пробелы или специальные символы.</p>
+								</div>
+								<button class="btn-secondary" data-bs-dismiss="modal" style="background-color: #fecfcc; border-radius: 20px;">Закрыть</button>
+								<button class="btn-secondary" style="background-color: #CCEFFE; border-radius: 20px;">Вход</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	<p style="color: darkgrey;">Если у вас уже есть аккаунт, перейдите на страницу <a href="#vxod" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: blue;">вход</a></p>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var registrationModal = new bootstrap.Modal(document.getElementById('registrationModal'), {
+				backdrop: 'static'
+			});
+	
+			var loginModal = new bootstrap.Modal(document.getElementById('loginModal'), {
+				backdrop: 'static'
+			});
+	
+			document.getElementById('openLoginModal').addEventListener('click', function() {
+				registrationModal.hide(); 
+				loginModal.show();
+			});
+		});
+	</script>	
 	<!-- Modal -->
 
 	<br>
@@ -152,8 +245,8 @@
 	<br>
 	<br>
 	<div>
-		<p class="text-center" style="font-size: 20px;">
-			<b>ПАРТНЕРЫ</b>
+		<p class="text-center" style="font-size: 20px; ">
+			<b >ПАРТНЕРЫ</b>
 		</p>
 	</div>
 	<!-- Карусель -->
@@ -181,14 +274,14 @@
 			</button>
 			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			  <span class="visually-hidden">Next</span>
+			  <span class="visually-hidden" id="services-section">Next</span>
 			</button>
 		  </div>
 	</div>
-	<br>
+	<br >
 	<br>
 	
-	<section class="main-content">
+	<section class="main-content" >
 		<div class="container">
 			<div class="row">
 				<div><p><b>УСЛУГИ</b></p></div>
@@ -196,7 +289,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/Rectangle 3.png" alt=""></a>
+							<a href="#"><img src="img/прививка.jpg" alt=""></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">Прививка</a></h4>
@@ -216,7 +309,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/Rectangle 5.png" alt=""></a>
+							<a href="#"><img src="img/грумнг.jpg"></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">Груминг</a></h4>
@@ -236,7 +329,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/Rectangle 4.png" alt=""></a>
+							<a href="#"><img src="img/осмотр.jpg" alt=""></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">Плановый осмотр</a></h4>
@@ -256,7 +349,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/Rectangle 6.png" alt="" style="font-size: 50px;"></a>
+							<a href="#"><img src="img/консультация.jpg"" style="font-size: 50px;"></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">Консультация</a></h4>
@@ -284,7 +377,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/n&d.png" alt=""></a>
+							<a href="#"><img src="img/N&D.jpg" alt=""></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">N&D</a></h4>
@@ -304,7 +397,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/home.png" alt=""></a>
+							<a href="#"><img src="img/когтеточка топ.jpg" alt=""></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">Когтеточка</a></h4>
@@ -324,7 +417,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/shamp.png" alt=""></a>
+							<a href="#"><img src="img/шампунь.jpg" alt=""></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">Шампунь
@@ -345,7 +438,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="product-card">
 						<div class="product-thumb">
-							<a href="#"><img src="img/leg.png" alt="" style="font-size: 50px;"></a>
+							<a href="#"  id="services-section4"><img src="img/лежанка.jpg" alt="" style="font-size: 50px;"></a>
 						</div>
 						<div class="product-details">
 							<h4><a href="#">Мягкая лежанка</a></h4>
@@ -355,7 +448,7 @@
 								</div>
 								<div class="product-links">
 									<a href="#"><i class="fas fa-shopping-cart"></i></a>
-									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#" ><i class="far fa-heart"></i></a>
 								</div>
 							</div>
 						</div>
@@ -365,8 +458,8 @@
 		</div>
 	</section>
 		<br>
-		<div>
-			<p class="text-center"><b>
+		<div >
+			<p class="text-center"  id="services-section2"><b>
 			У НАС ВЫ НАЙДЕТЕ ВСЕ НЕОБХОДИМОЕ ДЛЯ ЗАБОТЫ
 			О ВАШЕМ ЛЮБИМЦЕ.
 			НАШИ ОПЫТНЫЕ СПЕЦИАЛИСТЫ ВСЕГДА ГОТОВЫ ПОМОЧЬ ВАМ 
@@ -400,16 +493,15 @@
 
 		<br>	
 	<footer>
-		<section class="footer" style="background-color: #CCEFFE;">
+		<section class="footer" style="background-color: #CCEFFE;" id="services-section3">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-6">
 						<h4>Информация</h4>
 						<ul class="list-unstyled">
 							<li><a href="#">Главная</a></li>
-							<li><a href="#">О магазине</a></li>
+							<li><a href="#services-section4">О магазине</a></li>
 							<li><a href="#">Оплата и доставка</a></li>
-							<li><a href="#">Контакты</a></li>
 						</ul>
 					</div>
 

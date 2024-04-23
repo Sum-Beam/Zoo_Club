@@ -13,8 +13,7 @@ body {
 
 img {
 	max-width: 100%;
-	height: auto;
-	
+	height: auto;	
 }
 .map{
 	width: 500px;
@@ -129,8 +128,6 @@ a:hover {
 	font-size: 20px;
 	margin-left: 10px;
  }
- 
- 
 /* Product card */
 .product-card {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
@@ -199,3 +196,105 @@ a:hover {
 }
 
 /* Product card */
+.arrow-up:hover{
+	background: #b6d1fa;
+}
+/* Категории */
+.breadcrumbs {
+    margin: 30px 0;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: var(--contrast-color);
+    transition: all .5s;
+    margin-right: 0.5rem;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumbs a::after {
+    content: "/";
+    padding-left: 0.5rem;
+    color: var(--contrast-color);
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.filter-block:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.filter-block .form-check {
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input[type="checkbox"] {
+    border-radius: 0;
+    border-color: var(--gray-color);
+}
+
+.form-check-input:focus {
+    border-color: var(--gray-color);
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.filter-block .badge {
+    color: var(--text-color);
+}
+
+/* ============================= Category Page ============================ */
+
+@media only screen and (min-width : 992px) {
+    .header-bottom .navbar .dropdown-menu-end {
+        margin-left: 0;
+        border: 0;
+    }
+
+    .header-bottom .navbar .nav-link {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width : 991.98px) {
+    .header-bottom .navbar .dropdown-menu {
+        padding-left: 1rem;
+    }
+}
+/* ============================= Category Page ============================ */
+
+.burger{
+	display: flex;
+	position: relative;
+	z-index: 50;
+	align-items: center;
+	justify-content: flex-end;
+	width: 30px;
+	height: 18px;
+}
+.burger span{
+	height: 2px;
+	width: 80%;
+	transform: scale(1);
+	background-color: #b6d1fa;
+}
